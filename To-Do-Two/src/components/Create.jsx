@@ -1,6 +1,17 @@
 export const Create = () =>{
+
+
+
+
+
     return (<>
-        <h1>This is Create Component</h1>
+       <form action="">
+        <input type="text" name="todo" id="todo" />
+        <button type="submit">submit</button>
+
+
+
+       </form>
     
     </>)
 }

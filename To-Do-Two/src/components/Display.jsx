@@ -1,5 +1,21 @@
 export const Display = () =>{
+
+
+
+
     return(<>
-        <h1>This is Display Component</h1>
+        <table>
+            <tr>
+                <th>Task</th>
+                <th>Action</th>
+            </tr>
+
+            <tr>
+                <td>{ele}</td>
+                <td>Delete</td>
+            </tr>
+        </table>
+
+
     </>)
 }
