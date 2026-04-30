@@ -1,8 +1,4 @@
-export const Display = () =>{
-
-
-
-
+export const Display = ( {tasks,removeTask}) =>{
     return(<>
         <table>
             <tr>
@@ -10,12 +6,12 @@ export const Display = () =>{
                 <th>Action</th>
             </tr>
 
-            <tr>
+            {tasks.map(ele => <tr key={ele}>
                 <td>{ele}</td>
-                <td>Delete</td>
-            </tr>
+                <td><button onClick={() => removeTask(ele)}>Delete</button></td>
+            </tr>)}
         </table>
 
-
-    </>)
+    </>
+    )
 }
