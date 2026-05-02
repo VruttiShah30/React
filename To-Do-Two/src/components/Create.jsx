@@ -1,4 +1,5 @@
 import { use, useState } from "react"
+import styles from './Create.modules.css'
 
 export const Create = ({addTask}) =>{
 
@@ -14,10 +15,13 @@ const addTaskHandler =(e) =>{
 }
 
     return (<>
-       <form action="">
-            <input type="text" name="todo" id="todo" onChange={setDataHandler}/>
-            <button onClick={addTaskHandler}>submit</button>
-       </form>
+    <form action="">
+        <div>
+            <input type="text" name="todo" id="todo" onChange={setDataHandler} style={{color : "red"}} className="form-control"/>
+            <button onClick={addTaskHandler} className="btn btn-sucess">submit</button>
+        </div>
+            
+    </form>
     
     </>)
 }

@@ -2,7 +2,6 @@ import { useState } from "react";
 import { Create } from "./components/Create";
 import { Display } from "./components/Display";
 
-
 const App = () => {
 
   var [task,setTask] = useState([]);

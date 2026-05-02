@@ -1,6 +1,9 @@
-export const Display = ( {tasks,removeTask}) =>{
+import '../App.css'
+import styles from './Display.module.css'
+
+export const Display = ( {tasks,removeTask}) => {
     return(<>
-        <table>
+        <table className='table'>
             <tr>
                 <th>Task</th>
                 <th>Action</th>
@@ -8,7 +11,7 @@ export const Display = ( {tasks,removeTask}) =>{
 
             {tasks.map(ele => <tr key={ele}>
                 <td>{ele}</td>
-                <td><button onClick={() => removeTask(ele)}>Delete</button></td>
+                <td><button onClick={() => removeTask(ele)} className="btn btn-danger">Delete</button></td>
             </tr>)}
         </table>
 
