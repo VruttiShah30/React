@@ -4,7 +4,7 @@ export const Display = ({
     student,
     deleteStudent,
     editStudent
-}) =>{
+}) => {
 
     return (
         <>
