@@ -1,11 +1,30 @@
+import { useState } from "react";
+import { useRef } from "react";
 
 
-export const Create = () => {
+export const Create = ({ addStudent }) => {
 
-    const [ student ,setStudent ] = useState([]);
+    const username = useRef();
+    const email = useRef();
+    const phone = useRef();
 
+    const submitHandler = (e) =>{
+        e.preventDefault();
+
+        const data = {
+            username : username.current.value,
+            email : email.current.value,
+            phone : phone.current.value
+
+        }
+        addStudent(data);
+
+        username.current.value = "";
+        email.current.value = "";
+        phone.current.value = "";
+
+    }
     
-
     return (
         <>
         <div className="col-md-4">
@@ -15,23 +34,23 @@ export const Create = () => {
 
                     <div className="card-body p-4">
 
-                        <form>
+                        <form onSubmit={submitHandler}>
                             <div className="mb-4">
                                 <label>Username</label>
-                                <input type="text" className="form-control" placeholder="Enter username"/>
+                                <input type="text" className="form-control" placeholder="Enter username" ref={username}/>
                             </div>
 
                             <div className="mb-4">
                                 <label>Email</label>
-                                <input type="email" className="form-control" placeholder="Enter email"/>
+                                <input type="email" className="form-control" placeholder="Enter email " ref={email}/>
                             </div>
 
                             <div className="mb-4">
                                 <label>Phone</label>
-                                <input type="text" className="form-control" placeholder="Enter phone"/>
+                                <input type="text" className="form-control" placeholder="Enter phone" ref={phone}/>
                             </div>
 
-                            <button className="btn btn-success w-100">Submit</button>
+                            <button className="btn btn-success w-100" type="submit">Submit</button>
                         </form>
                     </div>
                 </div>

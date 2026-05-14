@@ -1,6 +1,8 @@
+import { useRef } from "react";
+import { useState } from "react";
+import { List } from "./List";  
 
-
-export const Display = () => {
+export const Display = ({ students , deleteStudent }) => {
 
     return (
         <>
@@ -20,8 +22,15 @@ export const Display = () => {
                                     <th colSpan="2">Actions</th>
                                 </tr>
                             </thead>
-                            
+
                             <tbody>
+                                {students.map(ele =>
+                                    <List 
+                                        key={ele.username}
+                                        ele={ele}
+                                        deleteStudent={deleteStudent}
+                                    />
+                                )}
 
                             </tbody>
                         </table>
