@@ -9,7 +9,7 @@ export const List = ({ ele , deleteStudent }) =>{
                 <td>{ele.phone}</td>
 
                 <td><button className="btn btn-warning">Edit</button></td>
-                <td><button className="btn btn-danger" onClick={deleteStudent(ele.username)}>Delete</button></td>
+                <td><button className="btn btn-danger" onClick={() => deleteStudent(ele.username)}>Delete</button></td>
 
             </tr>
         </>

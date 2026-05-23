@@ -10,7 +10,6 @@ export const Create = ({ addStudent }) => {
 
     const submitHandler = (e) =>{
         e.preventDefault();
-
         const data = {
             username : username.current.value,
             email : email.current.value,

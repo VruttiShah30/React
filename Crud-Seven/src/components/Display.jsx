@@ -1,5 +1,3 @@
-import { useRef } from "react";
-import { useState } from "react";
 import { List } from "./List";  
 
 export const Display = ({ students , deleteStudent }) => {
@@ -24,14 +22,7 @@ export const Display = ({ students , deleteStudent }) => {
                             </thead>
 
                             <tbody>
-                                {students.map(ele =>
-                                    <List 
-                                        key={ele.username}
-                                        ele={ele}
-                                        deleteStudent={deleteStudent}
-                                    />
-                                )}
-
+                                {students.map(ele =><List key={ele.username} ele={ele} deleteStudent={deleteStudent}/>)}
                             </tbody>
                         </table>
                     </div>
