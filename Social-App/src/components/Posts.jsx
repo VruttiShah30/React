@@ -1,6 +1,10 @@
+import { useContext } from "react"
+import { MyContext } from "./MyContext"
 
 
-export const Posts = ({ ele, deletePost, addLikes }) => {
+export const Posts = ({ ele }) => {
+
+    const { deletePost, addLikes } = useContext(MyContext)
     return <div class="col-md-6 mb-4">
 
         <div class="card post-card">

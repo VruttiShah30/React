@@ -1,21 +1,22 @@
+import { Link } from "react-router-dom"
 
-export const Nav = ({ setTab, tab }) => {
+export const Nav = () => {
     return <ul class="nav nav-tabs mb-4">
 
         <li class="nav-item">
-            <button class={`nav-link ${tab == 'create' ? 'active' : ''}`}
+            <Link to={"create"} class={`nav-link`}
                 data-bs-toggle="tab"
-                data-bs-target="#createPost" onClick={() => setTab("create")}>
+                data-bs-target="#createPost">
                 Create Post
-            </button>
+            </Link>
         </li>
 
         <li class="nav-item">
-            <button class={`nav-link ${tab == 'display' ? 'active' : ''}`}
+            <Link to={"/"} class={`nav-link`}
                 data-bs-toggle="tab"
-                data-bs-target="#viewPost" onClick={() => setTab("display")}>
+                data-bs-target="#viewPost">
                 View Posts
-            </button>
+            </Link>
         </li>
 
     </ul>

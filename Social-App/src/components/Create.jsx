@@ -1,8 +1,9 @@
-import { useRef } from "react"
+import { useContext, useRef } from "react"
+import { MyContext } from "./MyContext"
 
 
-export const Create = ({ addPost }) => {
-
+export const Create = () => {
+    const { addPost } = useContext(MyContext)
     const username = useRef()
     const title = useRef()
     const contents = useRef()
