@@ -57,7 +57,13 @@ function ExtraUserData() {
                 width : " 100% " ,
                 padding : "14px 18px",
                 fontSize : "16px",
-                border : "2px solid #cbd5e1"
+                border : "2px solid #cbd5e1",
+                borderRadius : "8px",
+                outline : "none",
+                boxSizing : "border-box",
+                transition : "0.3s",
+                backgroundColor  : "#fff" ,
+                color : "#334155"
             
             }}  
             
