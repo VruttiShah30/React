@@ -45,7 +45,30 @@ function ExtraUserData() {
             margin : '20px',
             borderWidth : '3px',
             borderStyle : 'solid',
-            borderColor : theme == 'light' ? 'black' : 'white' }} >ExtraUserData</div>
+            borderColor : theme == 'light' ? 'black' : 'white' }} >
+
+
+            <h2>UserDetail</h2>
+            <input type="text" placeholder='Search here' onChange={(e)=>{
+                setText(e.target.value)
+            }}
+            
+            style={{
+                width : " 100% " ,
+                padding : "14px 18px",
+                fontSize : "16px",
+                border : "2px solid #cbd5e1"
+            
+            }}  
+            
+            />
+
+
+
+
+
+
+            </div>
   )
 }
 
