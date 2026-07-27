@@ -66,13 +66,8 @@ function UserData() {
           color: "#334155",
         }}
       />
-               <ul
-        style={{
-          listStyle: "none",
-          padding: 0,
-          margin: 0,
-        }}
-      >
+       <ul
+        style={{ listStyle: "none", padding: 0, margin: 0,}}>
         {
             FilterUser && FilterUser.map((index,i)=>(
                    <li
